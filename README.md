@@ -27,8 +27,8 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/name/disk-cleanup/main
 
 ### Report Mode
 
-[Screenshot](https://raw.githubusercontent.com/name/disk-cleanup/main/images/report-mode.png)
+![Report Mode](./images/report-mode.png)
 
 ### Cleanup Mode
 
-[Screenshot](https://raw.githubusercontent.com/name/disk-cleanup/main/images/cleanup-mode.png)
+![Cleanup Mode](./images/cleanup-mode.png)
