@@ -108,7 +108,7 @@ Function clean_software_distribution {
     $folder_size = $folder_size.ToString() + " GB"
     $folder = $folder_path + " (" + $folder_size + ")"
     $folder
-    Remove-Item -Path $folder_path -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path $folder_path -Recurse -Force -ErrorAction SilentlyContinue -Confirm:$false
     if ($service.Status -eq "Stopped") {
         Start-Service -Name wuauserv
     }
