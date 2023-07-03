@@ -16,6 +16,9 @@ You can run the script by opening an Administrative PowerShell window and runnin
 ```powershell
 # Requires PowerShell 3.0+
 
+## If you receive a 'iwr : The request was aborted: Could not create SSL/TLS secure channel.' error, enter the below:
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 ## Report Mode
 iex (iwr 'https://raw.githubusercontent.com/name/disk-cleanup/main/disk-cleanup.ps1')
 
