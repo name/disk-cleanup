@@ -23,7 +23,7 @@ You can run the script by opening an Administrative PowerShell window and runnin
 iex (iwr 'https://raw.githubusercontent.com/name/disk-cleanup/main/disk-cleanup.ps1')
 
 ## Cleanup Mode
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/name/disk-cleanup/main/disk-cleanup.ps1' -OutFile 'disk-cleanup.ps1' -Force ; & '.\disk-cleanup.ps1' -clean
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/name/disk-cleanup/main/disk-cleanup.ps1' -OutFile 'disk-cleanup.ps1' ; & '.\disk-cleanup.ps1' -clean
 ```
 
 ## Examples
