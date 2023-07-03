@@ -24,7 +24,7 @@ Function get_large_files {
         Write-Host ( Get-ChildItem $scan_path -Recurse -ErrorAction SilentlyContinue | 
             Where-Object { $_.Length -gt 1GB } | 
             Sort-Object Length -Descending | Select-Object Name, Directory,
-            @{Name = "Size (GB)"; Expression = { "{0:N2}" -f ($_.Length / 1GB) } } | Format-Table  -AutoSize |
+            @{Name = "Size (GB)"; Expression = { "{0:N2}" -f ($_.Length / 1GB) } } | Format-List |
             Out-String )
     }
 }
@@ -38,7 +38,7 @@ Function get_log_files {
         Write-Host ( Get-ChildItem $scan_path -Recurse -ErrorAction SilentlyContinue | 
             Where-Object { $_.Length -gt 100MB -and $_.Extension -eq ".log" } | 
             Sort-Object Length -Descending | Select-Object Name, Directory,
-            @{Name = "Size (MB)"; Expression = { "{0:N2}" -f ($_.Length / 1MB) } } | Format-Table  -AutoSize |
+            @{Name = "Size (MB)"; Expression = { "{0:N2}" -f ($_.Length / 1MB) } } | Format-List |
             Out-String )
     }
 }
